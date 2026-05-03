@@ -3,13 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Frontend</title>
+    <title>E-Commerce</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our Online Store</h1>
-    </header>
-    <script src="scripts/app.js"></script>
+
+<header class="header">
+    
+    <div class="container">
+
+        <!-- Logo -->
+        <div class="logo">ShopEase</div>
+
+        <!-- Navigation -->
+        <nav class="nav" id="nav-menu">
+            <a href="#">Home</a>
+            <a href="#products">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <!-- Right Section -->
+        <div class="header-right">
+
+            <!-- Search Bar -->
+            <div class="search-box">
+                <input type="text" placeholder="Search products...">
+            </div>
+
+            <!-- Cart -->
+            <div class="cart">
+                🛒
+                <span class="cart-count">3</span>
+            </div>
+
+            <!-- Hamburger -->
+            <div class="hamburger" id="hamburger">
+                ☰
+            </div>
+
+        </div>
+
+    </div>
+    
+</header>
+
+<!-- 🔥 HERO SECTION -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Biggest Sale of the Year</h1>
+        <p>Up to 50% off on all products. Limited time offer!</p>
+        <a href="#products" class="cta-btn">Shop Now</a>
+    </div>
+</section>
+
+<!-- Dummy Products Section (for CTA link testing) -->
+<section id="products" style="height: 500px; padding: 50px;">
+    <h2>Products Section</h2>
+</section>
+
+<script src="scripts/app.js"></script>
 </body>
 </html>
