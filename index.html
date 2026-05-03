@@ -1,77 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Commerce</title>
-    <link rel="stylesheet" href="styles/main.css">
-</head>
-<body>
-
-<header class="header">
-    
-    <div class="container">
-
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
         <!-- Logo -->
         <div class="logo">ShopEase</div>
 
         <!-- Navigation -->
         <nav class="nav" id="nav-menu">
-            <a href="#">Home</a>
-            <a href="#products">Products</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+          <a href="#">Home</a>
+          <a href="#products">Products</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
         </nav>
 
         <!-- Right Section -->
         <div class="header-right">
+          <!-- Search Bar -->
+          <div class="search-box">
+            <input type="text" placeholder="Search products..." />
+          </div>
 
-            <!-- Search Bar -->
-            <div class="search-box">
-                <input type="text" placeholder="Search products...">
-            </div>
+          <!-- Cart -->
+          <a href="cart.html"> 🛒 <span id="cart-count">0</span> </a>
 
-            <!-- Cart -->
-            <div class="cart">
-                🛒
-                <span class="cart-count" id="cart-count">0</span>
-            </div>
-
-            <!-- Hamburger -->
-            <div class="hamburger" id="hamburger">
-                ☰
-            </div>
-
+          <!-- Hamburger -->
+          <div class="hamburger" id="hamburger">☰</div>
         </div>
+      </div>
+    </header>
 
-    </div>
-    
-</header>
-
-<!-- 🔥 HERO SECTION -->
-<section class="hero">
-    <div class="hero-content">
+    <!-- 🔥 HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content">
         <h1>Biggest Sale of the Year</h1>
         <p>Up to 50% off on all products. Limited time offer!</p>
         <a href="#products" class="cta-btn">Shop Now</a>
-    </div>
-</section>
-<!-- Dummy Products Section (for CTA link testing)
+      </div>
+    </section>
+    <!-- Dummy Products Section (for CTA link testing)
 <section id="products" style="height: 500px; padding: 50px;">
     <h2>Products Section</h2>
 </section> -->
 
-<section id="products" class="products-section">
-    <h2>Our Products</h2>
+    <section id="products" class="products-section">
+      <h2>Our Products</h2>
 
-    <div id="loading">Loading products...</div>
-    <div id="error" style="display: none;">Failed to load products.</div>
+      <div id="loading">Loading products...</div>
+      <div id="error" style="display: none">Failed to load products.</div>
 
-    <div class="product-grid" id="productGrid">
+      <div class="product-grid" id="productGrid">
         <!-- Products will load here dynamically -->
-    </div>
-</section>
+      </div>
+    </section>
 
-<script src="scripts/app.js"></script>
-</body>
+    <script src="scripts/app.js"></script>
+  </body>
 </html>
