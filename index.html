@@ -56,10 +56,20 @@
         <a href="#products" class="cta-btn">Shop Now</a>
     </div>
 </section>
-
-<!-- Dummy Products Section (for CTA link testing) -->
+<!-- Dummy Products Section (for CTA link testing)
 <section id="products" style="height: 500px; padding: 50px;">
     <h2>Products Section</h2>
+</section> -->
+
+<section id="products" class="products-section">
+    <h2>Our Products</h2>
+
+    <div id="loading">Loading products...</div>
+    <div id="error" style="display: none;">Failed to load products.</div>
+
+    <div class="product-grid" id="productGrid">
+        <!-- Products will load here dynamically -->
+    </div>
 </section>
 
 <script src="scripts/app.js"></script>
