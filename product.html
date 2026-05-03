@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="logo">ShopEase</div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+        </nav>
+        <div class="cart" >
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </div>
+</header>
+
+<section class="product-detail" id="productDetail">
+    <div id="loading">Loading product...</div>
+    <div id="error" style="display:none;">Failed to load product</div>
+</section>
+
+<script src="scripts/product.js"></script>
+</body>
+</html>
