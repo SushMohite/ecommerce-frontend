@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       loading.style.display = "none";
       renderProduct(product);
-
     } catch (err) {
       console.error(err);
       loading.style.display = "none";
@@ -38,44 +37,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderProduct(product) {
     productDetail.innerHTML = `
-      <div class="product-detail-container">
-        <div class="image-container">
-          <img src="${product.image}" alt="${product.title}">
-        </div>
-
-        <div class="details">
-          <h2>${product.title}</h2>
-          <p class="price">₹<span id="price">${product.price}</span></p>
-          <p>${product.description}</p>
-
-          <div class="variations">
-            <label>Size:</label>
-            <select id="size">
-              <option>S</option>
-              <option>M</option>
-              <option>L</option>
-            </select>
-
-            <label>Color:</label>
-            <select id="color">
-              <option>Black</option>
-              <option>Blue</option>
-              <option>Red</option>
-            </select>
-          </div>
-
-          <div class="quantity">
-            <button id="decrease">-</button>
-            <span id="qty">1</span>
-            <button id="increase">+</button>
-          </div>
-
-          <p>Total: ₹<span id="total">${product.price}</span></p>
-
-          <button id="addCartBtn">Add to Cart</button>
-        </div>
+    <div class="product-detail-container">
+      
+      <div class="image-container">
+        <img 
+          src="${product.image}" 
+          alt="${product.title}" 
+          loading="lazy"
+        />
       </div>
-    `;
+
+      <div class="details">
+        <h2>${product.title}</h2>
+        <p class="price">₹<span id="price">${product.price}</span></p>
+        <p>${product.description}</p>
+
+        <div class="variations">
+          <label>Size:</label>
+          <select id="size">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+
+          <label>Color:</label>
+          <select id="color">
+            <option value="Black">Black</option>
+            <option value="Blue">Blue</option>
+            <option value="Red">Red</option>
+          </select>
+        </div>
+
+        <div class="quantity">
+          <button id="decrease">-</button>
+          <span id="qty">1</span>
+          <button id="increase">+</button>
+        </div>
+
+        <p>Total: ₹<span id="total">${product.price}</span></p>
+
+        <button id="addCartBtn">Add to Cart</button>
+      </div>
+
+    </div>
+  `;
 
     setupInteractions(product);
   }
@@ -117,9 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const existing = cart.find(
       (item) =>
-        item.id === product.id &&
-        item.size === size &&
-        item.color === color
+        item.id === product.id && item.size === size && item.color === color,
     );
 
     if (existing) {
@@ -132,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
         image: product.image,
         qty,
         size,
-        color
+        color,
       });
     }
 
@@ -146,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     let total = 0;
-    cart.forEach(item => {
+    cart.forEach((item) => {
       total += item.qty || 1;
     });
 
@@ -163,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("storage", () => {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   let total = 0;
-  cart.forEach(item => total += item.qty || 1);
+  cart.forEach((item) => (total += item.qty || 1));
 
   const el = document.getElementById("cart-count");
   if (el) el.textContent = total;
