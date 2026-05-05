@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+}
+
+.form-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.toggle-box {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.toggle-box button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: #eee;
+}
+
+.toggle-box .active {
+    background: #007bff;
+    color: white;
+}
+
+.form {
+    display: none;
+    flex-direction: column;
+}
+
+.form.active {
+    display: flex;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background: #0056b3;
+}
+
+.password-box {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+.forgot {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.auth-link {
+  margin: 0 15px;
+  padding: 6px 12px;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 5px;
+}
+
+@media (max-width: 500px) {
+    .form-box {
+        padding: 20px;
+    }
+}

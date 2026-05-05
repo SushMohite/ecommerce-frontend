@@ -1,12 +1,18 @@
-/* Reset */
+/* /* Reset
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+  
 
 /* Header */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 .header {
   background: #1e1e2f;
   color: white;
@@ -18,8 +24,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
 }
-
 /* Logo */
 .logo {
   font-size: 24px;
@@ -37,6 +44,11 @@
   text-decoration: none;
   font-size: 16px;
   transition: 0.3s;
+}
+
+.header-right a {
+  color: white;
+  text-decoration: none;
 }
 
 .nav a:hover {
